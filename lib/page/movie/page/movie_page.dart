@@ -13,9 +13,7 @@ class _MoviePageState extends State<MoviePage> {
     return Scaffold(
       // appBar: AppBar(title: const Text("Movie")),
       body: Column(
-        children: [
-          Text("Movie")
-        ],
+        children: const [],
       ),
     );
   }

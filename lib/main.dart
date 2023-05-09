@@ -11,10 +11,6 @@ import 'package:shared/di/use_case_di.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge).then((value) {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle.dark
-          .copyWith(systemNavigationBarColor: Colors.transparent),
-    );
     _setupGetIT();
     Bloc.observer = const NimBlocObserver();
     runApp(const NimApp());
