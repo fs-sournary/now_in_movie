@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:now_in_movie/widget/theme_toggle_button.dart';
 
 class TvPage extends StatefulWidget {
   const TvPage({super.key});
@@ -14,6 +14,9 @@ class _TvPageState extends State<TvPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Tv"),
+        actions: const [
+          ThemeToggleButton()
+        ],
       ),
     );
   }
