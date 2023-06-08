@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'category_movies_response.g.dart';
 
+@JsonSerializable()
 class CategoryMoviesResponse {
   const CategoryMoviesResponse({
     this.dates,
@@ -23,6 +24,7 @@ class CategoryMoviesResponse {
   Map<String, dynamic> toJson() => _$CategoryMoviesResponseToJson(this);
 }
 
+@JsonSerializable()
 class CategoryMovieDateResponse {
   const CategoryMovieDateResponse({this.maximum, this.minimum});
 
@@ -35,7 +37,7 @@ class CategoryMovieDateResponse {
   Map<String, dynamic> toJson() => _$CategoryMovieDateResponseToJson(this);
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class CategoryMovieResponse {
   const CategoryMovieResponse({
     this.adult,

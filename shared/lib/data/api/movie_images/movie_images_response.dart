@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'movie_images_response.g.dart';
 
+@JsonSerializable()
 class MovieImagesResponse {
   const MovieImagesResponse({
     this.id,
@@ -19,6 +20,7 @@ class MovieImagesResponse {
   Map<String, dynamic> toJson() => _$MovieImagesResponseToJson(this);
 }
 
+@JsonSerializable()
 class MovieImagesBackdropResponse {
   final double? aspectRatio;
   final String? filePath;
@@ -45,6 +47,7 @@ class MovieImagesBackdropResponse {
   Map<String, dynamic> toJson() => _$MovieImagesBackdropResponseToJson(this);
 }
 
+@JsonSerializable()
 class MovieImagesPosterResponse {
   final double? aspectRatio;
   final String? filePath;

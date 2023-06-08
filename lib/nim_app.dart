@@ -13,14 +13,19 @@ class NimApp extends StatelessWidget {
   const NimApp({super.key});
 
   static const _navigationBarColor = Colors.transparent;
-  static const _sourceColor = Colors.pink;
+  static const _statusBarColor = Colors.transparent;
+  static const _sourceColor = Color(0xFF6750A4);
 
   void _updateSystemUi(ThemeMode themeMode) {
     final systemUiStyle = themeMode == ThemeMode.light
-        ? SystemUiOverlayStyle.dark
-            .copyWith(systemNavigationBarColor: _navigationBarColor)
-        : SystemUiOverlayStyle.light
-            .copyWith(systemNavigationBarColor: _navigationBarColor);
+        ? SystemUiOverlayStyle.dark.copyWith(
+            systemNavigationBarColor: _navigationBarColor,
+            statusBarColor: _statusBarColor,
+          )
+        : SystemUiOverlayStyle.light.copyWith(
+            systemNavigationBarColor: _navigationBarColor,
+            statusBarColor: _statusBarColor,
+          );
     SystemChrome.setSystemUIOverlayStyle(systemUiStyle);
   }
 
