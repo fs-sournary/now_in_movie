@@ -1,29 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'category_movies_response.dart';
+part of 'movie_list_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CategoryMoviesResponse _$CategoryMoviesResponseFromJson(
+MovieListResultResponse _$MovieListResultResponseFromJson(
         Map<String, dynamic> json) =>
-    CategoryMoviesResponse(
+    MovieListResultResponse(
       dates: json['dates'] == null
           ? null
-          : CategoryMovieDateResponse.fromJson(
+          : DateMovieListResponse.fromJson(
               json['dates'] as Map<String, dynamic>),
       page: json['page'] as int?,
       results: (json['results'] as List<dynamic>?)
-          ?.map(
-              (e) => CategoryMovieResponse.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => MovieListResponse.fromJson(e as Map<String, dynamic>))
           .toList(),
       totalPages: json['totalPages'] as int?,
       totalResults: json['totalResults'] as int?,
     );
 
-Map<String, dynamic> _$CategoryMoviesResponseToJson(
-        CategoryMoviesResponse instance) =>
+Map<String, dynamic> _$MovieListResultResponseToJson(
+        MovieListResultResponse instance) =>
     <String, dynamic>{
       'dates': instance.dates,
       'page': instance.page,
@@ -32,23 +31,22 @@ Map<String, dynamic> _$CategoryMoviesResponseToJson(
       'totalResults': instance.totalResults,
     };
 
-CategoryMovieDateResponse _$CategoryMovieDateResponseFromJson(
+DateMovieListResponse _$DateMovieListResponseFromJson(
         Map<String, dynamic> json) =>
-    CategoryMovieDateResponse(
+    DateMovieListResponse(
       maximum: json['maximum'] as String?,
       minimum: json['minimum'] as String?,
     );
 
-Map<String, dynamic> _$CategoryMovieDateResponseToJson(
-        CategoryMovieDateResponse instance) =>
+Map<String, dynamic> _$DateMovieListResponseToJson(
+        DateMovieListResponse instance) =>
     <String, dynamic>{
       'maximum': instance.maximum,
       'minimum': instance.minimum,
     };
 
-CategoryMovieResponse _$CategoryMovieResponseFromJson(
-        Map<String, dynamic> json) =>
-    CategoryMovieResponse(
+MovieListResponse _$MovieListResponseFromJson(Map<String, dynamic> json) =>
+    MovieListResponse(
       adult: json['adult'] as bool?,
       backdropPath: json['backdropPath'] as String?,
       genreIds:
@@ -66,8 +64,7 @@ CategoryMovieResponse _$CategoryMovieResponseFromJson(
       voteCount: json['voteCount'] as int?,
     );
 
-Map<String, dynamic> _$CategoryMovieResponseToJson(
-        CategoryMovieResponse instance) =>
+Map<String, dynamic> _$MovieListResponseToJson(MovieListResponse instance) =>
     <String, dynamic>{
       'adult': instance.adult,
       'backdropPath': instance.backdropPath,

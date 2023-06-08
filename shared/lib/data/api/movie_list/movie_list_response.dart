@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'category_movies_response.g.dart';
+part 'movie_list_response.g.dart';
 
 @JsonSerializable()
-class CategoryMoviesResponse {
-  const CategoryMoviesResponse({
+class MovieListResultResponse {
+  const MovieListResultResponse({
     this.dates,
     this.page,
     this.results,
@@ -12,34 +12,34 @@ class CategoryMoviesResponse {
     this.totalResults,
   });
 
-  final CategoryMovieDateResponse? dates;
+  final DateMovieListResponse? dates;
   final int? page;
-  final List<CategoryMovieResponse>? results;
+  final List<MovieListResponse>? results;
   final int? totalPages;
   final int? totalResults;
 
-  factory CategoryMoviesResponse.fromJson(Map<String, dynamic> json) =>
-      _$CategoryMoviesResponseFromJson(json);
+  factory MovieListResultResponse.fromJson(Map<String, dynamic> json) =>
+      _$MovieListResultResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CategoryMoviesResponseToJson(this);
+  Map<String, dynamic> toJson() => _$MovieListResultResponseToJson(this);
 }
 
 @JsonSerializable()
-class CategoryMovieDateResponse {
-  const CategoryMovieDateResponse({this.maximum, this.minimum});
+class DateMovieListResponse {
+  const DateMovieListResponse({this.maximum, this.minimum});
 
   final String? maximum;
   final String? minimum;
 
-  factory CategoryMovieDateResponse.fromJson(Map<String, dynamic> json) =>
-      _$CategoryMovieDateResponseFromJson(json);
+  factory DateMovieListResponse.fromJson(Map<String, dynamic> json) =>
+      _$DateMovieListResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CategoryMovieDateResponseToJson(this);
+  Map<String, dynamic> toJson() => _$DateMovieListResponseToJson(this);
 }
 
 @JsonSerializable()
-class CategoryMovieResponse {
-  const CategoryMovieResponse({
+class MovieListResponse {
+  const MovieListResponse({
     this.adult,
     this.backdropPath,
     this.genreIds,
@@ -71,8 +71,8 @@ class CategoryMovieResponse {
   final double? voteAverage;
   final int? voteCount;
 
-  factory CategoryMovieResponse.fromJson(Map<String, dynamic> json) =>
-      _$CategoryMovieResponseFromJson(json);
+  factory MovieListResponse.fromJson(Map<String, dynamic> json) =>
+      _$MovieListResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CategoryMovieResponseToJson(this);
+  Map<String, dynamic> toJson() => _$MovieListResponseToJson(this);
 }

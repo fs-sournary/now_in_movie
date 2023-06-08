@@ -12,9 +12,14 @@ class _TvPageState extends State<TvPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Tv"),
-        actions: const [
+      // appBar: AppBar(
+      //   title: const Text("Tv"),
+      //   actions: const [
+      //     ThemeToggleButton()
+      //   ],
+      // ),
+      body: Column(
+        children: [
           ThemeToggleButton()
         ],
       ),

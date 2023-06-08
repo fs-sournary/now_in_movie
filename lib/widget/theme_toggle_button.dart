@@ -8,10 +8,9 @@ class ThemeToggleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final icon = isDark ? Icons.brightness_7 : Icons.brightness_2;
     return IconButton(
-      icon: isDark
-          ? const Icon(Icons.brightness_7)
-          : const Icon(Icons.brightness_3),
+      icon: Icon(icon),
       onPressed: () {
         final themeMode = isDark ? ThemeMode.light : ThemeMode.dark;
         context.read<ThemeBloc>().add(ThemeModeSaved(themeMode));
