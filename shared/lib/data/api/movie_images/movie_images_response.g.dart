@@ -30,47 +30,47 @@ Map<String, dynamic> _$MovieImagesResponseToJson(
 MovieImagesBackdropResponse _$MovieImagesBackdropResponseFromJson(
         Map<String, dynamic> json) =>
     MovieImagesBackdropResponse(
-      aspectRatio: (json['aspect_ratio'] as num?)?.toDouble(),
-      filePath: json['file_path'] as String?,
+      aspectRatio: (json['aspectRatio'] as num?)?.toDouble(),
+      filePath: json['filePath'] as String?,
       height: json['height'] as int?,
       iso6391: json['iso_639_1'] as String?,
-      voteAverage: json['vote_average'] as int?,
-      voteCount: json['vote_count'] as int?,
+      voteAverage: json['voteAverage'] as int?,
+      voteCount: json['voteCount'] as int?,
       width: json['width'] as int?,
     );
 
 Map<String, dynamic> _$MovieImagesBackdropResponseToJson(
         MovieImagesBackdropResponse instance) =>
     <String, dynamic>{
-      'aspect_ratio': instance.aspectRatio,
-      'file_path': instance.filePath,
+      'aspectRatio': instance.aspectRatio,
+      'filePath': instance.filePath,
       'height': instance.height,
       'iso_639_1': instance.iso6391,
-      'vote_average': instance.voteAverage,
-      'vote_count': instance.voteCount,
+      'voteAverage': instance.voteAverage,
+      'voteCount': instance.voteCount,
       'width': instance.width,
     };
 
 MovieImagesPosterResponse _$MovieImagesPosterResponseFromJson(
         Map<String, dynamic> json) =>
     MovieImagesPosterResponse(
-      aspectRatio: (json['aspect_ratio'] as num?)?.toDouble(),
-      filePath: json['file_path'] as String?,
+      aspectRatio: (json['aspectRatio'] as num?)?.toDouble(),
+      filePath: json['filePath'] as String?,
       height: json['height'] as int?,
       iso6391: json['iso_639_1'] as String?,
-      voteAverage: json['vote_average'] as int?,
-      voteCount: json['vote_count'] as int?,
+      voteAverage: json['voteAverage'] as int?,
+      voteCount: json['voteCount'] as int?,
       width: json['width'] as int?,
     );
 
 Map<String, dynamic> _$MovieImagesPosterResponseToJson(
         MovieImagesPosterResponse instance) =>
     <String, dynamic>{
-      'aspect_ratio': instance.aspectRatio,
-      'file_path': instance.filePath,
+      'aspectRatio': instance.aspectRatio,
+      'filePath': instance.filePath,
       'height': instance.height,
       'iso_639_1': instance.iso6391,
-      'vote_average': instance.voteAverage,
-      'vote_count': instance.voteCount,
+      'voteAverage': instance.voteAverage,
+      'voteCount': instance.voteCount,
       'width': instance.width,
     };

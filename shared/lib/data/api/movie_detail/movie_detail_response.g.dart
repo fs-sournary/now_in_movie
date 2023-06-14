@@ -9,7 +9,7 @@ part of 'movie_detail_response.dart';
 MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
     MovieDetailResponse(
       adult: json['adult'] as bool?,
-      backdropPath: json['backdrop_path'] as String?,
+      backdropPath: json['backdropPath'] as String?,
       budget: json['budget'] as int?,
       genres: (json['genres'] as List<dynamic>?)
           ?.map((e) =>
@@ -17,24 +17,24 @@ MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
       homepage: json['homepage'] as String?,
       id: json['id'] as int?,
-      imdbId: json['imdb_id'] as String?,
-      originalLanguage: json['original_language'] as String?,
-      originalTitle: json['original_title'] as String?,
+      imdbId: json['imdbId'] as String?,
+      originalLanguage: json['originalLanguage'] as String?,
+      originalTitle: json['originalTitle'] as String?,
       overview: json['overview'] as String?,
       popularity: (json['popularity'] as num?)?.toDouble(),
-      posterPath: json['poster_path'] as String?,
-      productionCompanies: (json['production_companies'] as List<dynamic>?)
+      posterPath: json['posterPath'] as String?,
+      productionCompanies: (json['productionCompanies'] as List<dynamic>?)
           ?.map((e) => MovieDetailProductionCompanyResponse.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      productionCountries: (json['production_countries'] as List<dynamic>?)
+      productionCountries: (json['productionCountries'] as List<dynamic>?)
           ?.map((e) => MovieDetailProductionCountryResponse.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      releaseDate: json['release_date'] as String?,
+      releaseDate: json['releaseDate'] as String?,
       revenue: json['revenue'] as int?,
       runtime: json['runtime'] as int?,
-      spokenLanguages: (json['spoken_languages'] as List<dynamic>?)
+      spokenLanguages: (json['spokenLanguages'] as List<dynamic>?)
           ?.map((e) => MovieDetailSpokenLanguageResponse.fromJson(
               e as Map<String, dynamic>))
           .toList(),
@@ -42,37 +42,37 @@ MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
       tagline: json['tagline'] as String?,
       title: json['title'] as String?,
       video: json['video'] as bool?,
-      voteAverage: (json['vote_average'] as num?)?.toDouble(),
-      voteCount: json['vote_count'] as int?,
+      voteAverage: (json['voteAverage'] as num?)?.toDouble(),
+      voteCount: json['voteCount'] as int?,
     );
 
 Map<String, dynamic> _$MovieDetailResponseToJson(
         MovieDetailResponse instance) =>
     <String, dynamic>{
       'adult': instance.adult,
-      'backdrop_path': instance.backdropPath,
+      'backdropPath': instance.backdropPath,
       'budget': instance.budget,
       'genres': instance.genres,
       'homepage': instance.homepage,
       'id': instance.id,
-      'imdb_id': instance.imdbId,
-      'original_language': instance.originalLanguage,
-      'original_title': instance.originalTitle,
+      'imdbId': instance.imdbId,
+      'originalLanguage': instance.originalLanguage,
+      'originalTitle': instance.originalTitle,
       'overview': instance.overview,
       'popularity': instance.popularity,
-      'poster_path': instance.posterPath,
-      'production_companies': instance.productionCompanies,
-      'production_countries': instance.productionCountries,
-      'release_date': instance.releaseDate,
+      'posterPath': instance.posterPath,
+      'productionCompanies': instance.productionCompanies,
+      'productionCountries': instance.productionCountries,
+      'releaseDate': instance.releaseDate,
       'revenue': instance.revenue,
       'runtime': instance.runtime,
-      'spoken_languages': instance.spokenLanguages,
+      'spokenLanguages': instance.spokenLanguages,
       'status': instance.status,
       'tagline': instance.tagline,
       'title': instance.title,
       'video': instance.video,
-      'vote_average': instance.voteAverage,
-      'vote_count': instance.voteCount,
+      'voteAverage': instance.voteAverage,
+      'voteCount': instance.voteCount,
     };
 
 MovieDetailGenreResponse _$MovieDetailGenreResponseFromJson(
@@ -93,18 +93,18 @@ MovieDetailProductionCompanyResponse
     _$MovieDetailProductionCompanyResponseFromJson(Map<String, dynamic> json) =>
         MovieDetailProductionCompanyResponse(
           id: json['id'] as int?,
-          logoPath: json['logo_path'] as String?,
+          logoPath: json['logoPath'] as String?,
           name: json['name'] as String?,
-          originCountry: json['origin_country'] as String?,
+          originCountry: json['originCountry'] as String?,
         );
 
 Map<String, dynamic> _$MovieDetailProductionCompanyResponseToJson(
         MovieDetailProductionCompanyResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'logo_path': instance.logoPath,
+      'logoPath': instance.logoPath,
       'name': instance.name,
-      'origin_country': instance.originCountry,
+      'originCountry': instance.originCountry,
     };
 
 MovieDetailProductionCountryResponse

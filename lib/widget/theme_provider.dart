@@ -73,6 +73,24 @@ class ThemeProvider extends InheritedWidget {
     return BottomAppBarTheme(color: colorScheme.surface, elevation: 0);
   }
 
+  SearchBarThemeData _searchBarThemeData(ColorScheme colorScheme) {
+    return SearchBarThemeData(
+      // surfaceTintColor: MaterialStatePropertyAll(
+      //   colorScheme.surfaceVariant,
+      // ),
+      // shape: MaterialStatePropertyAll(
+      //   RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      // ),
+      backgroundColor: MaterialStatePropertyAll(
+        colorScheme.onInverseSurface,
+      ),
+      // overlayColor: MaterialStateColor.resolveWith(
+      //   (states) => colorScheme.background,
+      // ),
+      elevation: const MaterialStatePropertyAll(0),
+    );
+  }
+
   ThemeData light([Color? targetColor]) {
     final colorScheme = _colorScheme(Brightness.light, targetColor);
     return ThemeData.light().copyWith(
@@ -82,7 +100,8 @@ class ThemeProvider extends InheritedWidget {
       navigationBarTheme: _navigationBarTheme(colorScheme),
       bottomAppBarTheme: _bottomAppBarTheme(colorScheme),
       cardTheme: _cardTheme(),
-      scaffoldBackgroundColor: colorScheme.background,
+      searchBarTheme: _searchBarThemeData(colorScheme),
+      scaffoldBackgroundColor: colorScheme.surface,
       useMaterial3: true,
     );
   }
@@ -96,7 +115,8 @@ class ThemeProvider extends InheritedWidget {
       navigationBarTheme: _navigationBarTheme(colorScheme),
       bottomAppBarTheme: _bottomAppBarTheme(colorScheme),
       cardTheme: _cardTheme(),
-      scaffoldBackgroundColor: colorScheme.background,
+      searchBarTheme: _searchBarThemeData(colorScheme),
+      scaffoldBackgroundColor: colorScheme.surface,
       useMaterial3: true,
     );
   }

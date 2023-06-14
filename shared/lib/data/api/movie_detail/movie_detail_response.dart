@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'movie_detail_response.g.dart';
 
+@JsonSerializable()
 class MovieDetailResponse {
   const MovieDetailResponse({
     this.adult,
@@ -61,7 +62,7 @@ class MovieDetailResponse {
   Map<String, dynamic> toJson() => _$MovieDetailResponseToJson(this);
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class MovieDetailGenreResponse {
   const MovieDetailGenreResponse({this.id, this.name});
 
@@ -74,6 +75,7 @@ class MovieDetailGenreResponse {
   Map<String, dynamic> toJson() => _$MovieDetailGenreResponseToJson(this);
 }
 
+@JsonSerializable()
 class MovieDetailProductionCompanyResponse {
   const MovieDetailProductionCompanyResponse({
     this.id,
@@ -97,6 +99,7 @@ class MovieDetailProductionCompanyResponse {
   }
 }
 
+@JsonSerializable()
 class MovieDetailProductionCountryResponse {
   const MovieDetailProductionCountryResponse({this.iso31661, this.name});
 
@@ -113,7 +116,7 @@ class MovieDetailProductionCountryResponse {
       _$MovieDetailProductionCountryResponseToJson(this);
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class MovieDetailSpokenLanguageResponse {
   const MovieDetailSpokenLanguageResponse({this.ios6391, this.name});
 
