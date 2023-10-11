@@ -11,9 +11,11 @@ class _MoviePageState extends State<MoviePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(title: const Text("Movie")),
+      appBar: AppBar(title: const Text("Movie")),
       body: Column(
-        children: const [],
+        children: const [
+          Text("Page Movie")
+        ],
       ),
     );
   }
